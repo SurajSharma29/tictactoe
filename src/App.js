@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Main from "./components/Main";
+import CompA from "./comps/context/CompA";
+import CompC from "./comps/context/CompC";
+import { UserProvider } from "./comps/context/Context";
+import ClickCounter from "./comps/HOC/ClickCounter";
+import HoverCounter from "./comps/HOC/HoverCounter";
+import IndexMoment from "./comps/Lodash/IndexLodash";
+import Pwd from "./comps/passwordGenerator/Pwd";
+import Mains from "./redux/Mains";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Mains/>
+      {/* <Main /> */}
+      {/* <CompA /> */}
+      {/* <div>
+        <ClickCounter />
+        <HoverCounter />
+      </div>
+      <UserProvider value="hello brilworks">
+        <CompC />
+      </UserProvider> */}
+      {/* <IndexMoment /> */}
+      <br />
+      {/* <Pwd /> */}
     </div>
   );
 }
